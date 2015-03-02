@@ -24,24 +24,41 @@ public class Exercise2 {
         String s7 = myInteger + "";
         String s8 = myInteger + myStringInteger + "";
 
-        List myList = new ArrayList();
+        List phonecianAlphabet = new ArrayList();
 
-        myList.add("Alpha");
-        System.out.println(myList.size());  // arrays are .length, lists are .size() - length is a property of an array, while size is a method of a list
+        phonecianAlphabet.add("Bee");
+        System.out.println(phonecianAlphabet.size());  // arrays are .length, lists are .size() - length is a property of an array, while size is a method of a list
 
-        myList.add("Beta");
-        System.out.println(myList);
+        phonecianAlphabet.add("Cee");
+        System.out.println(phonecianAlphabet);
 
-        myList.add(0, "Omega");
-        System.out.println(myList.toString());
+        phonecianAlphabet.add(0, "Ay");
+        System.out.println(phonecianAlphabet.toString());
 
         Map myMap = new HashMap();
         myMap.put("GDI", "rules!");
         System.out.println(myMap);
         System.out.println(myMap.get("GDI"));
 
-        myMap.put("Dont do this!", myList);
-        System.out.println(myMap);
+        Map<String, List> alphabets = new HashMap<String, List>();
+        alphabets.put("Phonecian", phonecianAlphabet);
+        List<String> phoneticAlphabet = new ArrayList<String>();
+        phoneticAlphabet.add("Alpha");
+        phoneticAlphabet.add("Bravo");
+        phoneticAlphabet.add("Charlie");
+        phoneticAlphabet.add("Delta");
+        phoneticAlphabet.add("Echo");
+        phoneticAlphabet.add("Foxtrot");
+        List<String> greekAlphabet = new ArrayList<String>();
+        greekAlphabet.add("Alpha");
+        greekAlphabet.add("Beta");
+        greekAlphabet.add("Gamma");
+        alphabets.put("Greek", greekAlphabet);
+
+        System.out.println(alphabets);
+
+        System.out.println(alphabets.get("Greek"));
+
     }
 
 }
